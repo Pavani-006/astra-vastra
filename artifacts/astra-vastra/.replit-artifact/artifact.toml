@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Astra Vastra"
+version = "1.0.0"
+id = "artifacts/astra-vastra"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23772
+
+[services.development]
+run = "pnpm --filter @workspace/astra-vastra run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/astra-vastra", "run", "build" ]
+publicDir = "artifacts/astra-vastra/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23772"
+BASE_PATH = "/"

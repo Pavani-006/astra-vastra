@@ -1,27 +1,24 @@
-# Workspace
+# Astra Vastra
 
-## Overview
+A dark-themed, minimal React + Vite portfolio website for the fashion designer brand "Astra Vastra" — modern Indian-fusion bridal wear.
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+## Pages
+- `/` — Home / Gallery (2-column grid of 4 signature dresses: Midnight Bloom, Chandrika Grace, Noir Saaj, Velvet Vows)
+- `/design/:slug` — Design Detail page
+- `/add-design` — Add Design form (local state, toast on submit)
+- `/about` — Brand story
+- `/contact` — Inquiries with Instagram + email
 
-## Stack
+## Tech
+- pnpm monorepo
+- React + Vite at `artifacts/astra-vastra/` (preview path `/`)
+- Wouter routing, Tailwind, shadcn-style UI primitives
+- No backend — purely presentation
 
-- **Monorepo tool**: pnpm workspaces
-- **Node.js version**: 24
-- **Package manager**: pnpm
-- **TypeScript version**: 5.9
-- **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
-- **Validation**: Zod (`zod/v4`), `drizzle-zod`
-- **API codegen**: Orval (from OpenAPI spec)
-- **Build**: esbuild (CJS bundle)
+## Assets
+All dress imagery lives in `attached_assets/` and is imported via the `@assets/` Vite alias. The user provided 15 images: 5 are website inspiration mockups (not used as gallery imagery), and 10 are illustrated dress designs that drive the gallery and detail pages.
 
-## Key Commands
-
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- `pnpm --filter @workspace/api-server run dev` — run API server locally
-
-See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+## Style direction
+- Black background, white text, sparse gold accents (`#D4AF37`)
+- Inter (sans) + Playfair Display (serif)
+- Subtle fade-in animations only — no carousels, no parallax
