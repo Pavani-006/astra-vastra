@@ -6,6 +6,10 @@ import img1 from "@assets/image_1777203987017.png";
 import img2 from "@assets/image_1777203961349.png";
 import img3 from "@assets/image_1777203972766.png";
 import img4 from "@assets/image_1777204016360.png";
+import img5 from "@assets/image_1777205723497.png";
+import img6 from "@assets/image_1777205757044.png";
+import img7 from "@assets/image_1777205773841.png";
+import img8 from "@assets/image_1777205848499.png";
 import heroImage from "@assets/image_1777205534163.png";
 
 const images: Record<string, string> = {
@@ -13,6 +17,10 @@ const images: Record<string, string> = {
   "chandrika-grace": img2,
   "noir-saaj": img3,
   "velvet-vows": img4,
+  "violet-reverie": img5,
+  "onyx-empress": img6,
+  "lilac-rhapsody": img7,
+  "aqua-solene": img8,
 };
 
 export default function Home() {
@@ -84,22 +92,23 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-14">
           {designs.map((design) => (
             <Link key={design.id} href={`/design/${design.id}`} className="group block">
-              <div className="overflow-hidden aspect-[3/4] mb-6 bg-secondary">
+              <div className="overflow-hidden aspect-[3/4] mb-4 bg-secondary">
                 <img
                   src={images[design.id]}
                   alt={design.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-2xl font-serif group-hover:text-primary transition-colors">{design.name}</h3>
-                  <p className="text-muted-foreground text-sm uppercase tracking-widest mt-2">{design.category}</p>
-                </div>
-                <div className="w-8 h-[1px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+              <div>
+                <h3 className="text-base md:text-lg font-serif group-hover:text-primary transition-colors leading-tight">
+                  {design.name}
+                </h3>
+                <p className="text-muted-foreground text-[10px] uppercase tracking-[0.25em] mt-1.5">
+                  {design.category}
+                </p>
               </div>
             </Link>
           ))}

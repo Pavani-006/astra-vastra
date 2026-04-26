@@ -6,12 +6,20 @@ import img1 from "@assets/image_1777203987017.png";
 import img2 from "@assets/image_1777203961349.png";
 import img3 from "@assets/image_1777203972766.png";
 import img4 from "@assets/image_1777204016360.png";
+import img5 from "@assets/image_1777205723497.png";
+import img6 from "@assets/image_1777205757044.png";
+import img7 from "@assets/image_1777205773841.png";
+import img8 from "@assets/image_1777205848499.png";
 
 const mainImages: Record<string, string> = {
   "midnight-bloom": img1,
   "chandrika-grace": img2,
   "noir-saaj": img3,
   "velvet-vows": img4,
+  "violet-reverie": img5,
+  "onyx-empress": img6,
+  "lilac-rhapsody": img7,
+  "aqua-solene": img8,
 };
 
 export default function DesignDetail() {
