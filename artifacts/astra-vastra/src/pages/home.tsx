@@ -143,6 +143,10 @@ export default function Home() {
                   <span className="text-white/40 tracking-widest uppercase text-[11px]">Category</span>
                   <span className="text-white">Bridal Lehenga</span>
                 </div>
+                <div className="flex justify-between items-baseline border-t border-white/10 pt-4 mt-4">
+                  <span className="text-white/40 tracking-widest uppercase text-[11px]">From</span>
+                  <span className="text-primary font-serif text-2xl">₹6,20,000</span>
+                </div>
               </div>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -204,6 +208,9 @@ export default function Home() {
                   </h3>
                   <p className="text-white/40 text-[11px] uppercase tracking-[0.3em] mt-2">
                     {design.category}
+                  </p>
+                  <p className="text-primary text-sm font-serif mt-3 tracking-wide">
+                    {design.price}
                   </p>
                 </div>
               </Link>

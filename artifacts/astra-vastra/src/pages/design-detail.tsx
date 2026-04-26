@@ -70,6 +70,10 @@ export default function DesignDetail() {
                   <span className="text-muted-foreground tracking-widest uppercase text-xs">Atelier</span>
                   <span className="text-white">Made to order</span>
                 </div>
+                <div className="flex justify-between items-baseline border-t border-white/10 pt-5 mt-2">
+                  <span className="text-muted-foreground tracking-widest uppercase text-xs">From</span>
+                  <span className="text-primary font-serif text-3xl">{design.price}</span>
+                </div>
               </div>
 
               <div className="flex items-center gap-8">

@@ -8,7 +8,8 @@ export const designs = [
       "@assets/image_1777203987017.png"
     ],
     fabric: "Silk Velvet & Organza",
-    category: "Bridal Gown"
+    category: "Bridal Gown",
+    price: "₹4,80,000"
   },
   {
     id: "noir-saaj",
@@ -19,7 +20,8 @@ export const designs = [
       "@assets/image_1777203972766.png"
     ],
     fabric: "Heavy Crepe",
-    category: "Couture Gown"
+    category: "Couture Gown",
+    price: "₹3,60,000"
   },
   {
     id: "raven-crown",
@@ -30,7 +32,8 @@ export const designs = [
       "@assets/image_1777205534163.png"
     ],
     fabric: "Tulle & Antique Zari",
-    category: "Bridal Lehenga"
+    category: "Bridal Lehenga",
+    price: "₹6,20,000"
   },
   {
     id: "velvet-vows",
@@ -41,6 +44,7 @@ export const designs = [
       "@assets/image_1777204016360.png"
     ],
     fabric: "Micro-Velvet",
-    category: "Fusion Saree"
+    category: "Fusion Saree",
+    price: "₹2,95,000"
   }
 ];
