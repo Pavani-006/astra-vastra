@@ -6,6 +6,7 @@ import img1 from "@assets/image_1777203987017.png";
 import img2 from "@assets/image_1777203961349.png";
 import img3 from "@assets/image_1777203972766.png";
 import img4 from "@assets/image_1777204016360.png";
+import heroImage from "@assets/image_1777205534163.png";
 
 const images: Record<string, string> = {
   "midnight-bloom": img1,
@@ -13,8 +14,6 @@ const images: Record<string, string> = {
   "noir-saaj": img3,
   "velvet-vows": img4,
 };
-
-const heroImage = img2;
 
 export default function Home() {
   return (
