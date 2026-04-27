@@ -1,13 +1,9 @@
 import { Layout } from "@/components/layout";
-import { designs } from "@/data/designs";
+import { useDesigns } from "@/data/designs-store";
 import { Link } from "wouter";
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import img1 from "@assets/image_1777203987017.png";
-import img2 from "@assets/image_1777203972766.png";
-import img3 from "@assets/image_1777205534163.png";
-import img4 from "@assets/image_1777204016360.png";
 import heroImage from "@assets/image_1777205757044.png";
 import featuredImage from "@assets/image_1777205534163.png";
 import bannerBridal from "@assets/image_1777203987017.png";
@@ -18,13 +14,6 @@ import sketch3 from "@assets/image_1777203961349.png";
 import sketch4 from "@assets/image_1777203972766.png";
 import sketch5 from "@assets/image_1777203999001.png";
 import sketch6 from "@assets/image_1777203987017.png";
-
-const images: Record<string, string> = {
-  "midnight-bloom": img1,
-  "noir-saaj": img2,
-  "raven-crown": img3,
-  "velvet-vows": img4,
-};
 
 const sketches = [
   { src: sketch1, label: "Atelier Study I" },
@@ -46,6 +35,7 @@ const stagger = {
 };
 
 export default function Home() {
+  const designs = useDesigns();
   const sliderRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const [activeBanner, setActiveBanner] = useState<"bridal" | "couture" | null>(
@@ -441,10 +431,15 @@ export default function Home() {
                 <Link href={`/design/${design.id}`} className="group block">
                   <div className="relative overflow-hidden aspect-[3/4] mb-5 bg-secondary">
                     <img
-                      src={images[design.id]}
+                      src={design.image}
                       alt={design.name}
                       className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
                     />
+                    {design.isUserAdded && (
+                      <div className="absolute top-4 right-4 z-10 text-[9px] tracking-[0.3em] uppercase text-primary bg-black/70 backdrop-blur-sm px-3 py-1 border border-primary/40">
+                        New
+                      </div>
+                    )}
                     <div
                       className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                       style={{
