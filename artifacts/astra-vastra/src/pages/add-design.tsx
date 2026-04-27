@@ -16,7 +16,7 @@ type FormValues = {
 const inputBase =
   "w-full bg-[#0d0d0d] border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all";
 
-const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
+const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
 
 function readFileAsDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -53,7 +53,7 @@ export default function AddDesign() {
       return;
     }
     if (file.size > MAX_IMAGE_BYTES) {
-      setImageError("Image is too large. Please use one under 4 MB.");
+      setImageError("Image is too large. Please use one under 10 MB.");
       return;
     }
     setImageFile(file);
@@ -143,7 +143,7 @@ export default function AddDesign() {
                       Click to upload an image
                     </p>
                     <p className="text-white/40 text-[11px] tracking-wider uppercase">
-                      PNG, JPG · up to 4 MB
+                      PNG, JPG · up to 10 MB
                     </p>
                   </div>
                 )}
