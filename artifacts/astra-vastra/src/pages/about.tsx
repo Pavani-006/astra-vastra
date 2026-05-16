@@ -1,5 +1,4 @@
 import { Layout } from "@/components/layout";
-import aboutImg1 from "@assets/image_1777204059342.png";
 import aboutImg2 from "@assets/image_1777204071163.png";
 
 export default function About() {
@@ -16,7 +15,11 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center mb-32">
             <div className="aspect-[4/5] overflow-hidden">
-              <img src={aboutImg1} alt="Craftsmanship detail" className="w-full h-full object-cover" />
+              <img
+                src="https://i.pinimg.com/736x/ed/2b/a3/ed2ba38fbb9f57722ae615435a25c636.jpg"
+                alt="Craftsmanship detail"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h2 className="text-3xl font-serif mb-6">Heirloom Meets Modernity</h2>
