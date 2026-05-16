@@ -5,7 +5,7 @@ import aboutImg2 from "@assets/image_1777204071163.png";
 export default function About() {
   return (
     <Layout>
-      <article className="animate-in fade-in duration-1000 pb-24">
+      <article id="about" className="animate-in fade-in duration-1000 pb-24">
         <div className="container mx-auto px-6 py-24">
           <div className="max-w-4xl mx-auto text-center mb-32">
             <h1 className="text-5xl md:text-7xl font-serif mb-8">The Philosophy of <span className="text-primary italic">Less</span></h1>

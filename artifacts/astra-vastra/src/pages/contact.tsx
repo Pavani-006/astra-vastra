@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout";
 export default function Contact() {
   return (
     <Layout>
-      <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden animate-in fade-in duration-1000">
+      <div id="contact" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden animate-in fade-in duration-1000">
         <div className="absolute inset-0 z-0 bg-black">
           <div
             className="absolute inset-0"

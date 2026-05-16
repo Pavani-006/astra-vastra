@@ -108,6 +108,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border;
   }
@@ -118,5 +122,10 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-normal;
+  }
+
+  /* Add scroll margin to sections to account for fixed navbar (80px) + padding */
+  section, [id] {
+    scroll-margin-top: 6rem;
   }
 }

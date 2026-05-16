@@ -65,6 +65,7 @@ export default function Home() {
     <Layout>
       {/* HERO */}
       <section
+        id="home"
         ref={heroRef}
         className="relative overflow-hidden"
       >
@@ -270,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* FEATURED EDITORIAL */}
-      <section className="border-t border-white/5 bg-gradient-to-b from-black via-[#0a0a0a] to-black">
+      <section id="featured" className="border-t border-white/5 bg-gradient-to-b from-black via-[#0a0a0a] to-black">
         <div className="container mx-auto px-6 py-24 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <motion.div
@@ -484,7 +485,7 @@ export default function Home() {
       </section>
 
       {/* SPLIT COLLECTION BANNERS */}
-      <section className="border-t border-white/5">
+      <section id="banners" className="border-t border-white/5">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {[
             {
@@ -564,7 +565,7 @@ export default function Home() {
       </section>
 
       {/* HORIZONTAL SLIDER */}
-      <section className="border-t border-white/5 overflow-hidden">
+      <section id="sketches" className="border-t border-white/5 overflow-hidden">
         <div className="container mx-auto px-6 py-24 lg:py-32">
           <motion.div
             className="flex items-end justify-between mb-12 gap-8"

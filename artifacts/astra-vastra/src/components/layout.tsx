@@ -1,5 +1,39 @@
 import { Link, useLocation } from "wouter";
 
+interface NavLinkProps {
+  href: string;
+  label: string;
+  isActive: boolean;
+}
+
+function NavLink({ href, label, isActive }: NavLinkProps) {
+  // For anchor links, use a regular <a> tag to allow native smooth scrolling
+  if (href.startsWith("#")) {
+    return (
+      <a
+        href={href}
+        className={`text-sm tracking-widest uppercase transition-colors hover:text-primary ${
+          isActive ? "text-primary" : "text-white/80"
+        }`}
+      >
+        {label}
+      </a>
+    );
+  }
+
+  // For regular routes, use wouter Link
+  return (
+    <Link
+      href={href}
+      className={`text-sm tracking-widest uppercase transition-colors hover:text-primary ${
+        isActive ? "text-primary" : "text-white/80"
+      }`}
+    >
+      {label}
+    </Link>
+  );
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
 
@@ -19,15 +53,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </Link>
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.href}
                 href={link.href}
-                className={`text-sm tracking-widest uppercase transition-colors hover:text-primary ${
-                  location === link.href ? "text-primary" : "text-white/80"
-                }`}
-              >
-                {link.label}
-              </Link>
+                label={link.label}
+                isActive={location === link.href}
+              />
             ))}
           </nav>
           {/* Mobile menu could go here, keeping simple for now */}
