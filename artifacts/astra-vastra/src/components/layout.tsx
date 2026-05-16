@@ -48,7 +48,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-[100dvh] flex flex-col bg-background text-foreground selection:bg-primary selection:text-black">
       <header className="fixed top-0 w-full z-50 mix-blend-difference bg-black/50 backdrop-blur-md border-b border-border/10">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="font-serif text-2xl tracking-widest text-white hover:text-primary transition-colors">
+          <Link
+            href="/"
+            onClick={() => {
+              if (location === "/") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            className="font-serif text-2xl tracking-widest text-white hover:text-primary transition-colors"
+          >
             ASTRA VASTRA
           </Link>
           <nav className="hidden md:flex items-center gap-8">
