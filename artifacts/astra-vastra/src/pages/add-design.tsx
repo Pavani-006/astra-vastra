@@ -14,7 +14,7 @@ type FormValues = {
 };
 
 const inputBase =
-  "w-full bg-[#0d0d0d] border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all";
+  "w-full bg-[#0d0d0d] border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/30 text-sm transition-all duration-200 ease-out focus:outline-none focus:border-primary/70 focus:ring-2 focus:ring-primary/30 focus:ring-offset-2 focus:ring-offset-background hover:border-white/30";
 
 const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
 
@@ -274,7 +274,7 @@ export default function AddDesign() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full rounded-full bg-white text-black hover:bg-primary transition-colors tracking-[0.3em] uppercase text-xs py-4 mt-8 disabled:opacity-50"
+              className="w-full rounded-full bg-white text-black hover:bg-primary hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors tracking-[0.3em] uppercase text-xs py-4 mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Saving..." : "Submit Design"}
             </button>

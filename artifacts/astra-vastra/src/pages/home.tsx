@@ -106,10 +106,10 @@ export default function Home() {
           style={{ opacity: heroOpacity }}
           className="container mx-auto px-6 pt-12 pb-24 lg:pt-20 lg:pb-32"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center min-h-[80vh]">
             <motion.div
               style={{ y: heroTextY }}
-              className="lg:pr-8"
+              className="lg:pr-10"
               initial="hidden"
               animate="visible"
               variants={stagger}
@@ -140,7 +140,7 @@ export default function Home() {
               <motion.p
                 variants={fadeUp}
                 transition={{ duration: 0.8 }}
-                className="text-white/60 text-base md:text-lg mb-12 max-w-md font-light"
+                className="text-white/70 text-base md:text-xl mb-12 max-w-lg leading-relaxed font-light"
               >
                 A black-and-gold couture house — one designer, one collection,
                 one quiet conviction.
@@ -273,9 +273,9 @@ export default function Home() {
       {/* FEATURED EDITORIAL */}
       <section id="featured" className="border-t border-white/5 bg-gradient-to-b from-black via-[#0a0a0a] to-black">
         <div className="container mx-auto px-6 py-24 lg:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
-              className="lg:col-span-7 group relative overflow-hidden"
+              className="group relative overflow-hidden"
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
@@ -305,7 +305,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="lg:col-span-5 lg:pl-4"
+              className="md:pl-8 lg:pl-12"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
@@ -330,7 +330,7 @@ export default function Home() {
               <motion.p
                 variants={fadeUp}
                 transition={{ duration: 0.8 }}
-                className="text-white/70 text-base md:text-lg leading-relaxed font-light mb-10 max-w-md"
+                className="text-white/70 text-base md:text-xl leading-relaxed font-light mb-10 max-w-xl"
               >
                 Layers of obsidian tulle veil a deep crimson core,
                 hand-embroidered in antique gold. A regal, theatrical silhouette
@@ -417,7 +417,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto"
+             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
@@ -429,7 +429,7 @@ export default function Home() {
                 variants={fadeUp}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Link href={`/design/${design.id}`} className="group block">
+                <Link href={`/design/${design.id}`} className="group block h-full">
                   <div className="relative overflow-hidden aspect-[4/5] md:aspect-[3/4] mb-5 bg-secondary">
                     <img
                       src={design.image}
