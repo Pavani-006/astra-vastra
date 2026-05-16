@@ -160,7 +160,7 @@ export default function Home() {
                   </span>
                   <span className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
                 </Link>
-                <Link
+                <a
                   href="#collection"
                   className="group relative inline-block border border-white/30 text-white px-10 py-4 text-xs tracking-[0.3em] uppercase overflow-hidden hover:border-primary"
                 >
@@ -168,7 +168,7 @@ export default function Home() {
                     View Collection
                   </span>
                   <span className="absolute inset-0 bg-primary -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-                </Link>
+                </a>
               </motion.div>
             </motion.div>
 
@@ -417,7 +417,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
@@ -430,7 +430,7 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               >
                 <Link href={`/design/${design.id}`} className="group block">
-                  <div className="relative overflow-hidden aspect-[3/4] mb-5 bg-secondary">
+                  <div className="relative overflow-hidden aspect-[4/5] md:aspect-[3/4] mb-5 bg-secondary">
                     <img
                       src={design.image}
                       alt={design.name}
@@ -486,7 +486,7 @@ export default function Home() {
 
       {/* SPLIT COLLECTION BANNERS */}
       <section id="banners" className="border-t border-white/5">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
           {[
             {
               key: "bridal" as const,
@@ -519,11 +519,11 @@ export default function Home() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link
-                href={b.href}
-                onMouseEnter={() => setActiveBanner(b.key)}
-                onMouseLeave={() => setActiveBanner(null)}
-                className="relative group block aspect-[4/5] md:aspect-[3/4] overflow-hidden"
-              >
+                  href={b.href}
+                  onMouseEnter={() => setActiveBanner(b.key)}
+                  onMouseLeave={() => setActiveBanner(null)}
+                  className="relative group block aspect-[4/5] md:aspect-[3/4] overflow-hidden h-full"
+                >
                 <img
                   src={b.img}
                   alt={`${b.title} collection`}
